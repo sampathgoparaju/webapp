@@ -25,9 +25,10 @@ stages{
           }
     }
 
-   stage('send the mail')
-       emailext body: 'hi', subject: 'hi', to: 'sampathgoparaju@gmail.com'	 
-   
+	stage('send the mail'){
+		steps{
+		emailext body: 'hi', subject: 'hi', to: 'sampathgoparaju@gmail.com'	 
+		}
     }
      
 }
